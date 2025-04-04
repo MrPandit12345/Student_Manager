@@ -28,7 +28,7 @@ function StudentTable() {
 
     const RemoveDetails =(sid)=>{
         if(window.confirm("Are you sure to delete")){
-            fetch(`http://localhost:5000/students/${sid}`,{
+            fetch(`https://studb-dphn.onrender.com/students/${sid}`,{
                 method:'DELETE',
             })
             .then((res)=>{
