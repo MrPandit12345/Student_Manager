@@ -12,7 +12,7 @@ function EditStudent() {
     const navigate = useNavigate();
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/students/${sid}`)
+        fetch(`https://studb-dphn.onrender.com/students/${sid}`)
         .then((res)=>res.json())
         .then((data)=>{
             setId(data.id)
@@ -26,7 +26,7 @@ function EditStudent() {
     const handleSubmit =(e)=>{
         e.preventDefault();
         const studentData={id,name,place,phone};
-        fetch(`http://localhost:5000/students/${sid}`,{
+        fetch(`https://studb-dphn.onrender.com/students/${sid}`,{
             method:'PUT',
             headers:{"content-type":"application/json"},
             body : JSON.stringify(studentData)
