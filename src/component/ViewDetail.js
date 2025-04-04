@@ -8,7 +8,7 @@ function ViewDetail() {
     const[stuData,setStuData]= useState({});
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/students/${sid}`)
+        fetch(`https://studb-dphn.onrender.com/students/${sid}`)
         .then((res)=>res.json())
         .then((data)=>{setStuData(data)})
         .catch((err)=>{console.log(err)})
