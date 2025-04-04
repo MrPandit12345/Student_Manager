@@ -13,7 +13,7 @@ function CreateStudent() {
     const handleSubmit =(e)=>{
         e.preventDefault();
         const studentData={id,name,place,phone};
-        fetch('http://localhost:5000/students',{
+        fetch('https://studb-dphn.onrender.com/students',{
             method:'POST',
             headers:{"content-type":"application/json"},
             body : JSON.stringify(studentData)
