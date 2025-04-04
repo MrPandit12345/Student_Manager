@@ -6,7 +6,7 @@ function StudentTable() {
     const[student,setStudent] = useState('');
 
     useEffect(()=>{
-        fetch('http://localhost:5000/students')
+        fetch('https://studb-dphn.onrender.com/students')
         .then((res)=>res.json())
         .then((data)=>{
             setStudent(data);    
